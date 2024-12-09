@@ -1,0 +1,32 @@
+
+classDiagram
+    class Main {
+        -FuzzyMatchingAgent agent
+        +main() None
+    }
+    class FuzzyMatchingAgent {
+        -DataHandler data_handler
+        -EmbedchainIntegration embedchain
+        -LLAMAAPI llama_api
+        +handle_missing_values(dataset: DataFrame) DataFrame
+        +configure(parameters: dict) None
+    }
+    class DataHandler {
+        +load_data(file_path: str) DataFrame
+        +save_data(dataset: DataFrame, file_path: str) None
+    }
+    class EmbedchainIntegration {
+        +embed_data(dataset: DataFrame) list
+        +retrieve_embeddings(query: str) list
+    }
+    class LLAMAAPI {
+        +fuzzy_match(data1: list, data2: list) list
+    }
+    class Config {
+        +load_config(file_path: str) dict
+        +save_config(config: dict, file_path: str) None
+    }
+    Main --> FuzzyMatchingAgent
+    FuzzyMatchingAgent --> DataHandler
+    FuzzyMatchingAgent --> EmbedchainIntegration
+    FuzzyMatchingAgent --> LLAMAAPI

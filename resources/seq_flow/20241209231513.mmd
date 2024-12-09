@@ -1,0 +1,21 @@
+
+sequenceDiagram
+    participant M as Main
+    participant FMA as FuzzyMatchingAgent
+    participant DH as DataHandler
+    participant EI as EmbedchainIntegration
+    participant LA as LLAMAAPI
+    participant C as Config
+    M->>FMA: main()
+    FMA->>C: load_config(file_path)
+    C-->>FMA: return config
+    FMA->>DH: load_data(file_path)
+    DH-->>FMA: return dataset
+    FMA->>EI: embed_data(dataset)
+    EI-->>FMA: return embeddings
+    FMA->>LA: fuzzy_match(embeddings, embeddings)
+    LA-->>FMA: return matched_data
+    FMA->>DH: save_data(matched_data, file_path)
+    DH-->>FMA: data saved
+    FMA->>C: save_config(config, file_path)
+    C-->>FMA: config saved

@@ -1,0 +1,4 @@
+pandas==1.3.3
+embedchain==0.1.0
+recordlinkage==0.14
+llama3api==0.2.1
