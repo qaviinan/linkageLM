@@ -13,11 +13,12 @@ The Fuzzy LM Module is designed to address the challenge of matching identifiers
 
 The module integrates seamlessly into data processing workflows and leverages advanced tools such as the Record-linkage library for data comparison and Embedchain for embedding management. It is designed with usability in mind, enabling easy integration and customization.
 
+
 ---
 
 ## Features
 
-- Fuzzy matching using data embeddings.
+- Comprehensive fuzzy matching using multiple methods.
 - Management of missing values in datasets.
 - Integration with LLAMA 3 API for advanced matching capabilities.
 - Embedding operations using Embedchain.
@@ -103,8 +104,6 @@ The module integrates seamlessly into data processing workflows and leverages ad
 Install dependencies with:
 ```bash
 pip install -r requirements.txt
-```
-
 ---
 
 ## Notes
