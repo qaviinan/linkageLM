@@ -22,8 +22,11 @@ class Main:
 
     def main(self) -> None:
         """Main function to execute the data processing workflow."""
-        self.agent.process_data(self.input_file, self.output_file, self.match_columns)
-        print("Fuzzy matching process completed successfully.")
+        try:
+            self.agent.process_data(self.input_file, self.output_file, self.match_columns)
+            print("Fuzzy matching process completed successfully.")
+        except Exception as e:
+            print(f"An error occurred during the fuzzy matching process: {e}")
 
 def parse_arguments():
     """Parses command-line arguments."""
