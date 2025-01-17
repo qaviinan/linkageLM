@@ -104,6 +104,7 @@ The module integrates seamlessly into data processing workflows and leverages ad
 Install dependencies with:
 ```bash
 pip install -r requirements.txt
+```
 ---
 
 ## Notes
