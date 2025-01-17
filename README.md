@@ -1,4 +1,4 @@
-# Fuzzy LM Module
+# Linkage LM Module
 
 ## Overview
 
