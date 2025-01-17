@@ -2,7 +2,16 @@
 
 ## Overview
 
-The Fuzzy LM Module is a robust solution for fuzzy matching and managing missing data using the LLAMA 3 API. It integrates seamlessly into data processing workflows and leverages advanced tools such as the Record-linkage library for data comparison and Embedchain for embedding management. This module is designed with usability in mind, enabling easy integration and customization.
+The Fuzzy LM Module is designed to address the challenge of matching identifiers when they are inconsistent strings that loosely match. This is a common problem in data integration and cleaning tasks where identifiers may vary slightly in spelling, format, or representation. The module provides six robust solution options to tackle this issue:
+
+1. **Fuzzy Multivariate String Matching**: Utilizes the Record-linkage library to compare strings based on similarity metrics and associated column values.
+2. **Fuzzy Phonetic String Matching**: Employs phonetic algorithms to match strings that sound similar.
+3. **Google Search Completion**: Enhances matching by retrieving additional context and data through web searches.
+4. **Vector Embedding Matching**: Leverages vector embeddings to find semantic similarities between identifiers.
+5. **Matching with LLMs**: Uses the LLAMA 3 API to perform advanced matching using language models.
+6. **Combined Matching**: Integrates multiple matching methods to improve accuracy and reliability.
+
+The module integrates seamlessly into data processing workflows and leverages advanced tools such as the Record-linkage library for data comparison and Embedchain for embedding management. It is designed with usability in mind, enabling easy integration and customization.
 
 ---
 
